@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee
+                      https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+         version="5.0"
+         metadata-complete="true">
+
+    <!--web.xml是我们配置web的核心应用-->
+    <!--注册Servlet-->
+    <servlet>
+        <servlet-name>helloServlet</servlet-name>
+        <servlet-class>Servlet.HelloServlet</servlet-class>
+    </servlet>
+    <!--一个Servlet对应一个mapping映射-->
+    <servlet-mapping>
+        <servlet-name>helloServlet</servlet-name>
+        <!--映射请求路径-->
+        <url-pattern>/hello</url-pattern>
+    </servlet-mapping>
+
+</web-app>
